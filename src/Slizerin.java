@@ -26,6 +26,19 @@ public class Slizerin extends Hogvarts{
                 ", zhazhdaVlasti=" + zhazhdaVlasti;
     }
 
+    public void compare (Slizerin slizerin2) {
+        int n1 = this.getAmbicioznost() + this.getHitrost() + this.getNahodchivost() + this.getReshitelnost() + this.getZhazhdaVlasti();
+        int n2 = slizerin2.getAmbicioznost() + slizerin2.getHitrost() + slizerin2.getNahodchivost() + slizerin2.getReshitelnost() + slizerin2.getZhazhdaVlasti();
+        if (n1 == n2) {
+            System.out.printf("Студенты Слизенина %s и %s равны по своим качествам%n", this.name, slizerin2.name);
+        }
+        if (n1 > n2) {
+            System.out.printf("%s лучше слизеринец , чем %s %n", this.name, slizerin2.name);
+        } else {
+            System.out.printf("%s лучше слизеринец, чем %s %n", slizerin2.name, this.name);
+        }
+    }
+
     public int getHitrost() {
         return hitrost;
     }

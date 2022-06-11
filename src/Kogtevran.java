@@ -24,6 +24,19 @@ public class Kogtevran extends Hogvarts{
                 ", tvorchestvo=" + tvorchestvo;
     }
 
+    public void compare(Kogtevran kogtevran2) {
+        int n1 = this.getMudrost() + this.getOstroumie() + this.getTvorchestvo() + this.getUm();
+        int n2 = kogtevran2.getMudrost() + kogtevran2.getOstroumie() + kogtevran2.getTvorchestvo() + kogtevran2.getUm();
+        if (n1 == n2) {
+            System.out.printf("Студенты Когтеврана %s и %s равны по своим качествам%n", this.name, kogtevran2.name);
+        }
+        if (n1 > n2) {
+            System.out.printf("%s лучше когтевранец , чем %s %n", this.name, kogtevran2.name);
+        } else {
+            System.out.printf("%s лучше когтевранец, чем %s %n", kogtevran2.name, this.name);
+        }
+    }
+
     public int getUm() {
         return um;
     }

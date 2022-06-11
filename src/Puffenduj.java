@@ -20,6 +20,19 @@ public class Puffenduj extends Hogvarts{
                 ", chestnost=" + chestnost;
     }
 
+    public void compare (Puffenduj puffenduj2) {
+        int n1 = this.getChestnost() + this.getTrudolyubie() + this.getVernost();
+        int n2 = puffenduj2.getChestnost() + puffenduj2.getTrudolyubie() + puffenduj2.getVernost();
+        if (n1 == n2) {
+            System.out.printf("Студенты Пуффендуя %s и %s равны по своим качествам%n", this.name, puffenduj2.name);
+        }
+        if (n1 > n2) {
+            System.out.printf("%s лучше пуффендуец , чем %s %n", this.name, puffenduj2.name);
+        } else {
+            System.out.printf("%s лучше пуффендуец, чем %s %n", puffenduj2.name, this.name);
+        }
+    }
+
     public int getTrudolyubie() {
         return trudolyubie;
     }
